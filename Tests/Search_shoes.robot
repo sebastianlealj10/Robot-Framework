@@ -1,19 +1,19 @@
 *** Settings ***
-Documentation  Basic info about the suite
-Library  SeleniumLibrary
-*** Variables ***
+Documentation  Robot framework exercise
+
+Resource  ../Resources/Ebay.robot
+Resource  ../Resources/Common.robot
+Test Setup  Begin Web Test
+Test Teardown  End Web Test
 
 
 *** Test Cases ***
-User must see the main page
-    [Documentation]  Basic infor about the test case
-    [Tags]  ATDD - Search Shoes Puma size 10 and order them
-    open browser  https://www.ebay.com/ Firefox
-    sleep  3s
-    Input Text  id:gh-ac  Shoes
-    click element  id:gh-btn
-    sleep  3s
-    select checkbox  css:input[aria-label='10']
-    close browser
+User must be able to search an item and sort the results
+    [Documentation]  Search Shoes Puma size 10 and order them by lowest first
+    [Tags]  ATDD
+    Ebay.Search Shoes
+    Ebay.Select Size Ten
+    Ebay.Select Brand Puma
+    Ebay.Sort Items by Lowest Price
 
-*** Keywords ***
+

@@ -1,68 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on linux)" generated="20190803 18:43:03.188" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on linux)" generated="20190804 12:34:30.133" rpa="false">
 <suite id="s1" name="Search shoes" source="/home/sebas/PycharmProjects/Robot/Tests/Search_shoes.robot">
-<test id="s1-t1" name="User must see the main page">
+<test id="s1-t1" name="User must be able to search an item and sort the results">
+<kw name="Begin Web Test" library="Common" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>https://www.ebay.com/ Firefox</arg>
 </arguments>
-<msg timestamp="20190803 18:43:03.277" level="INFO">Opening browser 'firefox' to base url 'https://www.ebay.com/ Firefox'.</msg>
-<status status="PASS" starttime="20190803 18:43:03.277" endtime="20190803 18:43:07.080"></status>
+<msg timestamp="20190804 12:34:30.228" level="INFO">Opening browser 'firefox' to base url 'https://www.ebay.com/ Firefox'.</msg>
+<status status="PASS" starttime="20190804 12:34:30.228" endtime="20190804 12:34:33.443"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20190803 18:43:10.081" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20190803 18:43:07.080" endtime="20190803 18:43:10.081"></status>
+<status status="PASS" starttime="20190804 12:34:30.228" endtime="20190804 12:34:33.444"></status>
 </kw>
+<kw name="Search Shoes" library="Ebay">
+<kw name="Search Shoes" library="HomePage">
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
 <arg>id:gh-ac</arg>
 <arg>Shoes</arg>
 </arguments>
-<msg timestamp="20190803 18:43:10.082" level="INFO">Typing text 'Shoes' into text field 'id:gh-ac'.</msg>
-<status status="PASS" starttime="20190803 18:43:10.082" endtime="20190803 18:43:10.164"></status>
+<msg timestamp="20190804 12:34:33.448" level="INFO">Typing text 'Shoes' into text field 'id:gh-ac'.</msg>
+<status status="PASS" starttime="20190804 12:34:33.447" endtime="20190804 12:34:33.505"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>id:gh-btn</arg>
 </arguments>
-<msg timestamp="20190803 18:43:10.164" level="INFO">Clicking element 'id:gh-btn'.</msg>
-<status status="PASS" starttime="20190803 18:43:10.164" endtime="20190803 18:43:15.192"></status>
+<msg timestamp="20190804 12:34:33.506" level="INFO">Clicking element 'id:gh-btn'.</msg>
+<status status="PASS" starttime="20190804 12:34:33.505" endtime="20190804 12:34:38.308"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3s</arg>
-</arguments>
-<msg timestamp="20190803 18:43:18.192" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20190803 18:43:15.192" endtime="20190803 18:43:18.193"></status>
+<status status="PASS" starttime="20190804 12:34:33.446" endtime="20190804 12:34:38.308"></status>
 </kw>
+<status status="PASS" starttime="20190804 12:34:33.445" endtime="20190804 12:34:38.308"></status>
+</kw>
+<kw name="Select Size Ten" library="Ebay">
+<kw name="Select Size Ten" library="SearchPage">
 <kw name="Select Checkbox" library="SeleniumLibrary">
 <doc>Selects checkbox identified by ``locator``.</doc>
 <arguments>
 <arg>css:input[aria-label='10']</arg>
 </arguments>
-<msg timestamp="20190803 18:43:18.193" level="INFO">Selecting checkbox 'css:input[aria-label='10']'.</msg>
-<status status="PASS" starttime="20190803 18:43:18.193" endtime="20190803 18:43:20.328"></status>
+<msg timestamp="20190804 12:34:38.309" level="INFO">Selecting checkbox 'css:input[aria-label='10']'.</msg>
+<status status="PASS" starttime="20190804 12:34:38.309" endtime="20190804 12:34:41.446"></status>
 </kw>
+<status status="PASS" starttime="20190804 12:34:38.309" endtime="20190804 12:34:41.447"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:38.308" endtime="20190804 12:34:41.447"></status>
+</kw>
+<kw name="Select Brand Puma" library="Ebay">
+<kw name="Select Brand on Search Bar" library="SearchPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>css:.x-searchable-list__textbox__aspect-Brand</arg>
+<arg>Puma</arg>
+</arguments>
+<msg timestamp="20190804 12:34:41.447" level="INFO">Typing text 'Puma' into text field 'css:.x-searchable-list__textbox__aspect-Brand'.</msg>
+<status status="PASS" starttime="20190804 12:34:41.447" endtime="20190804 12:34:41.551"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:41.447" endtime="20190804 12:34:41.551"></status>
+</kw>
+<kw name="Check Puma Brand" library="SearchPage">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>css:input[aria-label='PUMA']</arg>
+</arguments>
+<msg timestamp="20190804 12:34:41.551" level="INFO">Selecting checkbox 'css:input[aria-label='PUMA']'.</msg>
+<status status="PASS" starttime="20190804 12:34:41.551" endtime="20190804 12:34:44.918"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:41.551" endtime="20190804 12:34:44.919"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:41.447" endtime="20190804 12:34:44.919"></status>
+</kw>
+<kw name="Sort Items By Lowest Price" library="Ebay">
+<kw name="Sort Button" library="SearchPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css:button[aria-controls='w7']</arg>
+</arguments>
+<msg timestamp="20190804 12:34:44.920" level="INFO">Simulating Mouse Over on element 'css:button[aria-controls='w7']'.</msg>
+<status status="PASS" starttime="20190804 12:34:44.920" endtime="20190804 12:34:45.311"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:44.919" endtime="20190804 12:34:45.312"></status>
+</kw>
+<kw name="Sort by Lowest Price" library="SearchPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css:ul[class='srp-sort__menu'] &gt; li:nth-child(4)</arg>
+</arguments>
+<msg timestamp="20190804 12:34:45.313" level="INFO">Simulating Mouse Over on element 'css:ul[class='srp-sort__menu'] &gt; li:nth-child(4)'.</msg>
+<status status="PASS" starttime="20190804 12:34:45.313" endtime="20190804 12:34:45.633"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20190804 12:34:46.633" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190804 12:34:45.633" endtime="20190804 12:34:46.634"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css:ul[class='srp-sort__menu'] &gt; li:nth-child(4)</arg>
+</arguments>
+<msg timestamp="20190804 12:34:46.635" level="INFO">Clicking element 'css:ul[class='srp-sort__menu'] &gt; li:nth-child(4)'.</msg>
+<status status="PASS" starttime="20190804 12:34:46.634" endtime="20190804 12:34:48.272"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:45.312" endtime="20190804 12:34:48.272"></status>
+</kw>
+<status status="PASS" starttime="20190804 12:34:44.919" endtime="20190804 12:34:48.272"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190803 18:43:20.328" endtime="20190803 18:43:20.816"></status>
+<status status="PASS" starttime="20190804 12:34:48.272" endtime="20190804 12:34:48.783"></status>
 </kw>
-<doc>Basic infor about the test case</doc>
+<status status="PASS" starttime="20190804 12:34:48.272" endtime="20190804 12:34:48.783"></status>
+</kw>
+<doc>Search Shoes Puma size 10 and order them by lowest first</doc>
 <tags>
-<tag>ATDD - Search Shoes Puma size 10 and order them</tag>
+<tag>ATDD</tag>
 </tags>
-<status status="PASS" starttime="20190803 18:43:03.277" endtime="20190803 18:43:20.816" critical="yes"></status>
+<status status="PASS" starttime="20190804 12:34:30.227" endtime="20190804 12:34:48.783" critical="yes"></status>
 </test>
-<doc>Basic info about the suite</doc>
-<status status="PASS" starttime="20190803 18:43:03.188" endtime="20190803 18:43:20.817"></status>
+<doc>Robot framework exercise</doc>
+<status status="PASS" starttime="20190804 12:34:30.134" endtime="20190804 12:34:48.785"></status>
 </suite>
 <statistics>
 <total>
@@ -70,7 +139,7 @@
 <stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">ATDD - Search Shoes Puma size 10 and order them</stat>
+<stat pass="1" fail="0">ATDD</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="Search shoes">Search shoes</stat>
